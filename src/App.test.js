@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { AppWithFastRaw, AppWithMaterial } from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('app with fast (raw)', async () => {
+  render(<AppWithFastRaw />);
+  screen.getByText(/Tab panel 1/i)
+  fireEvent.click(screen.getByText(/Tab two/i));
+  screen.getByText(/Tab panel 2/i)
+});
+
+test('app with material', async () => {
+  render(<AppWithMaterial />);
+  screen.getByText(/Tab panel 1/i)
+  fireEvent.click(screen.getByText(/Tab two/i));
+  screen.getByText(/Tab panel 2/i)
 });

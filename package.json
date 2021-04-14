@@ -22,7 +22,9 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "ELECTRON=true craco test",
+    "test:jsdom": "craco test",
+    "test:electron": "ELECTRON=true craco test",
     "eject": "craco eject"
   },
   "jest": {

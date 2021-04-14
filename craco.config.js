@@ -2,10 +2,7 @@ module.exports = {
   jest: {
     configure: {
       "runner": "jest-electron/runner",
-      "testEnvironment": "jest-electron/environment",
-      "transformIgnorePatterns": [
-        ".*FAST.*"
-      ]
+      "testEnvironment": "jest-electron/environment"
     }
   }
 };

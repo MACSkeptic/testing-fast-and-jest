@@ -26,8 +26,6 @@
     "eject": "craco eject"
   },
   "jest": {
-    "runner": "jest-electron/runner",
-    "testEnvironment": "jest-electron/environment",
     "transformIgnorePatterns": [
       ".*FAST.*"
     ]

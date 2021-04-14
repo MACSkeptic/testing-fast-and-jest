@@ -1,8 +1,8 @@
-module.exports = {
+module.exports = () => ({
   jest: {
-    configure: {
+    configure: process.env.ELECTRON ? {
       "runner": "jest-electron/runner",
-      "testEnvironment": "jest-electron/environment"
-    }
+      "testEnvironment": "jest-electron/environment",
+    } : {}
   }
-};
+});
